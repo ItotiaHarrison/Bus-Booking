@@ -45,7 +45,7 @@ function NavBar() {
                     background: "black",
                 }}
             >
-                About
+                Hire
             </NavLink>
 
             <NavLink
