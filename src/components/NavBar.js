@@ -1,9 +1,6 @@
 import React from 'react';
-import { NavLink, Route } from 'react-router-dom';
-import Home from './Home';
-import Login from './Login';
-import About from './About';
-import Support from './Support';
+import { NavLink } from 'react-router-dom';
+
 
 const linkStyles = {
     display: "inline-block",
@@ -26,9 +23,7 @@ function NavBar() {
                     background: "black",
                 }}
             >
-                <Route exact path="/">
-                    <Home />
-                </Route>
+                Home
             </NavLink>
 
             <NavLink
@@ -39,9 +34,7 @@ function NavBar() {
                     background: "black",
                 }}
             >
-                <Route exact path="/login">
-                    <Login />
-                </Route>
+                Login
             </NavLink>
 
             <NavLink
@@ -52,9 +45,7 @@ function NavBar() {
                     background: "black",
                 }}
             >
-                <Route exact path="/about">
-                    <About />
-                </Route>
+                About
             </NavLink>
 
             <NavLink
@@ -65,9 +56,7 @@ function NavBar() {
                     background: "black",
                 }}
             >
-                <Route exact path="/support">
-                    <Support />
-                </Route>
+                Support
             </NavLink>
 
         </div>
