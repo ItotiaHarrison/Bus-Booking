@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Support = () => {
+function Support(){
   return (
     <div>Support</div>
   )

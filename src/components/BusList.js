@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-const BusList = () => {
+function BusList(){
   return (
     <div>BusList</div>
   )
 }
 
-export default BusList
+export default BusList;
