@@ -1,11 +1,14 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Search from './Search';
 
 function Home(){
+    const [search, setSearch] = useState("")
+
+
     return (
         <div>
             <h1>HOME</h1>
-            <Search />
+            <Search search={search} setSearch={setSearch} />
         </div>
     )
 }

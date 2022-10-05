@@ -1,8 +1,11 @@
 import React from 'react';
 
-function Search (){
+
+
   return (
-    <div>Search</div>
+    <div className="ui large fluid icon input">
+    
+    </div>
   )
 }
 
