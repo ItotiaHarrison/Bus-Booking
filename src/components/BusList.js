@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Bus from './Bus';
 
-function BusList({ buses, setBusList }) {
+function BusList() {
+    const [buses, setBusList] = useState([]);
+
     useEffect(() => {
         fetch("http://localhost:3000")
             .then((res) => res.json())
@@ -29,19 +31,15 @@ function BusList({ buses, setBusList }) {
                     <th>
                         <h3>Route</h3>
                     </th>
-
                     <th>
                         <h3>Bus Type</h3>
                     </th>
-
                     <th>
                         <h3>Time</h3>
                     </th>
-
                     <th>
                         <h3>Fare</h3>
                     </th>
-
                     <th>
                         <h3>Status</h3>
                     </th>
