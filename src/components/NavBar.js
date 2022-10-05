@@ -22,6 +22,9 @@ function NavBar() {
             to="/"
             exact
             style={linkStyles}
+            activeStyle={{
+                background: "darkblue",
+              }}
             >
                 Home
             </NavLink>
@@ -30,6 +33,9 @@ function NavBar() {
             to="/login"
             exact
             style={linkStyles}
+            activeStyle={{
+                background: "darkblue",
+              }}
             >
                 Login
             </NavLink>
@@ -38,6 +44,9 @@ function NavBar() {
             to="/about"
             exact
             style={linkStyles}
+            activeStyle={{
+                background: "darkblue",
+              }}
             >
                 About
             </NavLink>
@@ -46,6 +55,9 @@ function NavBar() {
             to="/support"
             exact
             style={linkStyles}
+            activeStyle={{
+                background: "darkblue",
+              }}
             >
                 Support
             </NavLink>
