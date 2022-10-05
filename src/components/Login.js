@@ -16,10 +16,10 @@ function Login() {
             </form>
 
             <div>
-                <a href="https://" target="_blank">Forgot your password</a>
+                <a href="https://" >Forgot your password</a>
             </div>
             <div>
-                <a href="https://" target="_blank">New to Swift? Create your account</a>
+                <a href="https://" >New to Swift? Create your account</a>
             </div>
         </div>
     )

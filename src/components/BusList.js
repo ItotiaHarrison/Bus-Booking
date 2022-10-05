@@ -6,7 +6,7 @@ function BusList({ buses, setBusList }) {
         fetch("http://localhost:3000")
             .then((res) => res.json())
             .then((data) => setBusList(data))
-    }, []);
+    }, [setBusList]);
 
     const filteredBusList = buses.filter((bus) => bus.id)
 
