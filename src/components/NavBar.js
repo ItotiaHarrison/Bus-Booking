@@ -4,7 +4,7 @@ import Login from './Login';
 import About from './About';
 import Support from './Support';
 
-const NavBar = () => {
+function NavBar() {
     return (
         <div>
             <Home />
