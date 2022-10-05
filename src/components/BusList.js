@@ -7,8 +7,29 @@ function BusList({ busList, setBusList }) {
         .then((data) => setBusList(data))
     }, []);
 
+
     return (
-        <div>BusList</div>
+        <table>
+            <tbody>
+                <tr>
+                    <th>
+                        <h3>Route</h3>
+                    </th>
+
+                    <th>
+                        <h3>Bus Type</h3>
+                    </th>
+
+                    <th>
+                        <h3>Time</h3>
+                    </th>
+
+                    <th>
+                        <h3>Fare</h3>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
     )
 }
 
