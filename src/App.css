@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.footer {
+  background-color: blueviolet;
+  opacity : 0.6;
+  border-top:2px solid ;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: white;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-around;
+ }
+
+ 

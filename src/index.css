@@ -13,3 +13,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+nav {
+  background-color: blueviolet;
+  opacity: 0.6;
+}

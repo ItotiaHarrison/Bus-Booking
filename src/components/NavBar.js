@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const linkStyles = {
     display: "inline-block",
-    width: "50px",
+    width: "70px",
     padding: "12px",
     margin: "30px 100px",
     background: "grey",
@@ -14,7 +14,7 @@ const linkStyles = {
 
 function NavBar() {
     return (
-        <div>
+        <nav>
             <NavLink
                 to="/"
                 exact
@@ -23,7 +23,7 @@ function NavBar() {
                     background: "black",
                 }}
             >
-                Home
+                HOME
             </NavLink>
 
             <NavLink
@@ -34,7 +34,7 @@ function NavBar() {
                     background: "black",
                 }}
             >
-                Login
+                LOGIN
             </NavLink>
 
             <NavLink
@@ -45,7 +45,7 @@ function NavBar() {
                     background: "black",
                 }}
             >
-                Hire
+                HIRE
             </NavLink>
 
             <NavLink
@@ -56,10 +56,10 @@ function NavBar() {
                     background: "black",
                 }}
             >
-                Support
+                SUPPORT
             </NavLink>
 
-        </div>
+        </nav>
     )
 }
 
