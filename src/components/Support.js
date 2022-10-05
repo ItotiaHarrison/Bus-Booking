@@ -4,9 +4,9 @@ function Support() {
     function handleChange(event) {
         return event.target.value
     }
-    
+
     return (
-        <div>
+        <div className='support'>
             <form>
                 <h3>How was your ride?</h3>
                 <textarea name="message" onChange={handleChange} ></textarea>

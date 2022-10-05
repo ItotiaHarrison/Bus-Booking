@@ -1,14 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-function Search({ search, setSearch }) {
-    function handleSearch(event) {
-        setSearch(event.target.value);
+function Search() {
+    const [currentLocation, setCurrentLocation] = useState("");
+    const [destination, setDestination] = useState("");
+
+
+    function handleLocation(event) {
+        setCurrentLocation(event.target.value);
+    }
+
+
+    function handleDestination(event) {
+        setDestination(event.target.value);
     }
 
     return (
         <div className="ui large fluid icon input">
-            <input type="text" name={search} placeholder="Search" onChange={handleSearch} />
-            <i className="circular search link icon"></i>
+            <form>
+                <div>
+                    <input type="text" name={currentLocation} placeholder="Current location" onChange={handleLocation} />
+                </div>
+                <div>
+                    <input type="text" name={destination} placeholder="Destination" onChange={handleDestination} />
+                </div>
+                <button>Available Buses</button>
+            </form>
+
         </div>
     )
 }

@@ -6,7 +6,7 @@ function Login() {
     }
 
     return (
-        <div>
+        <div className='login'>
 
             <form onSubmit={handleSubmit}>
                 <div>
