@@ -1,73 +1,73 @@
 {
     "buses": [
         {
-            "route": "",
-            "type": "",
-            "time": "",
-            "fare": "",
+            "from": "Nakuru",
+            "to": "Nairobi",
+            "departure": "7.01 P.M",
+            "fare": "Kes 530",
             "status": ""
         },
         {
-            "route": "",
-            "type": "",
-            "time": "",
-            "fare": "",
+            "from": "Nairobi",
+            "to": "Kisumu",
+            "departure": "11.06 P.M",
+            "fare": "Kes 1000",
             "status": ""
         },
         {
-            "route": "",
-            "type": "",
-            "time": "",
-            "fare": "",
+            "from": "Machakos",
+            "to": "Mombasa",
+            "departure": "5.38 PM",
+            "fare": "Kes 1000",
             "status": ""
         },
         {
-            "route": "",
-            "type": "",
-            "time": "",
-            "fare": "",
+            "from": "Nairobi",
+            "to": "Mandela",
+            "departure": "2.56 P.M",
+            "fare": "Kes 900",
             "status": ""
         },
         {
-            "route": "",
-            "type": "",
-            "time": "",
-            "fare": "",
+            "from": "Mombasa",
+            "to": "Nairobi",
+            "departure": "3.19 P.M",
+            "fare": "Kes 1100",
             "status": ""
         },
         {
-            "route": "",
-            "type": "",
-            "time": "",
-            "fare": "",
+            "from": "Lowdar",
+            "to": "Kitale",
+            "departure": "10.09 A.M",
+            "fare": "Kes 750",
             "status": ""
         },
         {
-            "route": "",
-            "type": "",
-            "time": "",
-            "fare": "",
+            "from": "Eldoret",
+            "to": "Nairobi",
+            "departure": "7.15 A.M",
+            "fare": "Kes 1000",
             "status": ""
         },
         {
-            "route": "",
-            "type": "",
-            "time": "",
-            "fare": "",
+            "from": "Kisumu",
+            "to": "Eldoret",
+            "departure": "8.37 P.M",
+            "fare": "Kes 500",
             "status": ""
         },
         {
-            "route": "",
-            "type": "",
-            "time": "",
-            "fare": "",
+            "from": "Nairobi",
+            "to": "Kisii",
+            "departure": "6.24 P.M",
+            "fare": "Kes 750",
             "status": ""
         },
         {
-            "route": "",
-            "type": "",
-            "time": "",
-            "fare": "",
+            "from": "Bungoma",
+            "to": "Nakuru",
+            "departure": "4.49 A.M",
+            "fare": "Kes 800",
             "status": ""
         }
     ]

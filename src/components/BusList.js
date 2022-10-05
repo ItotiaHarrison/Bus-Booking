@@ -5,7 +5,7 @@ function BusList() {
     const [buses, setBusList] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000")
+        fetch("http://localhost:3000/buses")
             .then((res) => res.json())
             .then((data) => setBusList(data))
     }, [setBusList]);
@@ -17,7 +17,8 @@ function BusList() {
             buses={buses}
             setBusList={setBusList}
             key={bus.id}
-            route={bus.route}
+            from={bus.from}
+            to={bus.to}
             type={bus.type}
             departure={bus.departure}
             fare={bus.fare}
@@ -29,7 +30,10 @@ function BusList() {
             <tbody>
                 <tr>
                     <th>
-                        <h3>Route</h3>
+                        <h3>From</h3>
+                    </th>
+                    <th>
+                        <h3>To</h3>
                     </th>
                     <th>
                         <h3>Bus Type</h3>

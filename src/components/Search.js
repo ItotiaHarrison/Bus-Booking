@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 function Search() {
     const [currentLocation, setCurrentLocation] = useState("");
@@ -15,7 +15,7 @@ function Search() {
     }
 
     return (
-        <div className="ui large fluid icon input">
+        <div >
             <form>
                 <div>
                     <input type="text" name={currentLocation} placeholder="Current location" onChange={handleLocation} />
