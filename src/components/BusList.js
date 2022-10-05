@@ -1,12 +1,26 @@
 import React, { useEffect } from 'react';
+import Bus from './Bus';
 
-function BusList({ busList, setBusList }) {
+function BusList({ buses, setBusList }) {
     useEffect(() => {
         fetch("http://localhost:3000")
-        .then((res) => res.json())
-        .then((data) => setBusList(data))
+            .then((res) => res.json())
+            .then((data) => setBusList(data))
     }, []);
 
+    const filteredBusList = buses.filter((bus) => bus.id)
+
+    const busList = filteredBusList.map((bus) => {
+        return <Bus
+            buses={buses}
+            setBusList={setBusList}
+            key={bus.id}
+            route={bus.route}
+            type={bus.type}
+            time={bus.time}
+            fare={bus.fare}
+        />
+    })
 
     return (
         <table>
@@ -27,7 +41,12 @@ function BusList({ busList, setBusList }) {
                     <th>
                         <h3>Fare</h3>
                     </th>
+
+                    <th>
+                        <h3>Status</h3>
+                    </th>
                 </tr>
+                {busList}
             </tbody>
         </table>
     )

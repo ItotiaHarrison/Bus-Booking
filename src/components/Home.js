@@ -10,7 +10,7 @@ function Home() {
     return (
         <div>
             <Search search={search} setSearch={setSearch} />
-            <BusList busList={list} setBusList={setList} />
+            <BusList buses={list} setBusList={setList} />
         </div>
     )
 }
