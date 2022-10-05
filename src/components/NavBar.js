@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
 import Home from './Home';
 import Login from './Login';
 import About from './About';
@@ -9,63 +9,67 @@ const linkStyles = {
     display: "inline-block",
     width: "50px",
     padding: "12px",
-    margin: "0 6px 6px",
-    background: "blue",
+    margin: "30px 100px",
+    background: "grey",
     textDecoration: "none",
     color: "white",
-  };
+};
 
 function NavBar() {
     return (
         <div>
             <NavLink
-            to="/"
-            exact
-            style={linkStyles}
-            activeStyle={{
-                background: "darkblue",
-              }}
+                to="/"
+                exact
+                style={linkStyles}
+                activeStyle={{
+                    background: "black",
+                }}
             >
-                Home
+                <Route exact path="/">
+                    <Home />
+                </Route>
             </NavLink>
 
             <NavLink
-            to="/login"
-            exact
-            style={linkStyles}
-            activeStyle={{
-                background: "darkblue",
-              }}
+                to="/login"
+                exact
+                style={linkStyles}
+                activeStyle={{
+                    background: "black",
+                }}
             >
-                Login
+                <Route exact path="/login">
+                    <Login />
+                </Route>
             </NavLink>
 
             <NavLink
-            to="/about"
-            exact
-            style={linkStyles}
-            activeStyle={{
-                background: "darkblue",
-              }}
+                to="/about"
+                exact
+                style={linkStyles}
+                activeStyle={{
+                    background: "black",
+                }}
             >
-                About
+                <Route exact path="/about">
+                    <About />
+                </Route>
             </NavLink>
 
             <NavLink
-            to="/support"
-            exact
-            style={linkStyles}
-            activeStyle={{
-                background: "darkblue",
-              }}
+                to="/support"
+                exact
+                style={linkStyles}
+                activeStyle={{
+                    background: "black",
+                }}
             >
-                Support
+                <Route exact path="/support">
+                    <Support />
+                </Route>
             </NavLink>
 
-            <Home />
-            <Login />
-            <About />
-            <Support />
         </div>
     )
 }

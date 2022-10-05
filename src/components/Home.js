@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './Search';
 
-const Home = () => {
+function Home(){
     return (
         <div>
             <h1>HOME</h1>
