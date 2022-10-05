@@ -9,7 +9,6 @@ function Home() {
 
     return (
         <div>
-            <h1>HOME</h1>
             <Search search={search} setSearch={setSearch} />
             <BusList busList={list} setBusList={setList} />
         </div>
