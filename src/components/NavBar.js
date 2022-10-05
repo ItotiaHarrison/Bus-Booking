@@ -5,12 +5,23 @@ import Login from './Login';
 import About from './About';
 import Support from './Support';
 
+const linkStyles = {
+    display: "inline-block",
+    width: "50px",
+    padding: "12px",
+    margin: "0 6px 6px",
+    background: "blue",
+    textDecoration: "none",
+    color: "white",
+  };
+
 function NavBar() {
     return (
         <div>
             <NavLink
             to="/"
             exact
+            style={linkStyles}
             >
                 Home
             </NavLink>
@@ -18,6 +29,7 @@ function NavBar() {
             <NavLink
             to="/login"
             exact
+            style={linkStyles}
             >
                 Login
             </NavLink>
@@ -25,6 +37,7 @@ function NavBar() {
             <NavLink
             to="/about"
             exact
+            style={linkStyles}
             >
                 About
             </NavLink>
@@ -32,6 +45,7 @@ function NavBar() {
             <NavLink
             to="/support"
             exact
+            style={linkStyles}
             >
                 Support
             </NavLink>
