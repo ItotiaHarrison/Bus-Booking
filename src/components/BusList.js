@@ -19,7 +19,7 @@ function BusList() {
             key={bus.id}
             route={bus.route}
             type={bus.type}
-            time={bus.time}
+            departure={bus.departure}
             fare={bus.fare}
         />
     })
@@ -35,7 +35,7 @@ function BusList() {
                         <h3>Bus Type</h3>
                     </th>
                     <th>
-                        <h3>Time</h3>
+                        <h3>Departure Time</h3>
                     </th>
                     <th>
                         <h3>Fare</h3>

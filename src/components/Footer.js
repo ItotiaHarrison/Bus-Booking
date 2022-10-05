@@ -8,7 +8,7 @@ function Footer() {
             </div>
 
             <div>
-                <h3><a href="#">ABOUT US</a></h3>
+                <h3><a href="http://">ABOUT US</a></h3>
                 <h3><a href="http://">CAREERS</a></h3>
             </div>
             <h4> The #1 Bus company</h4>
