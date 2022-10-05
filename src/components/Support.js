@@ -1,11 +1,15 @@
 import React from 'react'
 
 function Support() {
+    function handleChange(event) {
+        return event.target.value
+    }
+    
     return (
         <div>
             <form>
                 <h3>How was your ride?</h3>
-                <textarea name="message" ></textarea>
+                <textarea name="message" onChange={handleChange} ></textarea>
             </form>
 
 

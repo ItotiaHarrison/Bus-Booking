@@ -6,12 +6,13 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Hire from './components/Hire';
 import Support from './components/Support';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <div className="App">
-    <NavBar />
-    <Switch>
+      <NavBar />
+      <Switch>
         <Route exact path="/hire">
           <Hire />
         </Route>
@@ -25,7 +26,7 @@ function App() {
           <Support />
         </Route>
       </Switch>
-
+      <Footer />
     </div>
   );
 }

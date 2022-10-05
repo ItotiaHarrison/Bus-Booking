@@ -1,10 +1,14 @@
 import React from 'react'
 
 function Login() {
+    function handleSubmit(event) {
+        event.preventDefault();
+    }
+
     return (
         <div>
 
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div>
                     <input type="text" name="username" placeholder="Username" />
                 </div>
@@ -12,7 +16,7 @@ function Login() {
                 <div>
                     <input type="password" name="password" placeholder="Password" />
                 </div>
-                <input type="submit" value="LOG IN" />
+                <button>LOG IN</button>
             </form>
 
             <div>
