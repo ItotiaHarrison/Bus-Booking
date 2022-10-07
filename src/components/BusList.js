@@ -27,7 +27,8 @@ function BusList({ from, to, buses, setBusList, book, setBook}) {
             <td>{bus.departure}</td>
             <td>{bus.fare}</td>
             <td><button onClick={handleBook}>
-                {book ? "booked" : "book"}</button></td>
+                {book ? "booked" : "book"}
+                </button></td>
         </tr>
         )
     })
