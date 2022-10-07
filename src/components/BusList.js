@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import Bus from './Bus';
 
-function BusList({buses, setBusList, availableBuses, setAvailableBuses}) {
+function BusList({ from, to, buses, setBusList, availableBuses, setAvailableBuses }) {
 
     useEffect(() => {
         fetch("http://localhost:3000/buses")
@@ -9,7 +9,13 @@ function BusList({buses, setBusList, availableBuses, setAvailableBuses}) {
             .then((data) => setBusList(data))
     }, [setBusList]);
 
-    const filteredBusList = buses.filter((bus) => (bus.from && bus.to))
+    const filteredBusList = buses.filter((bus) => {
+        return (from === "" ? bus : bus.from.includes(from))
+    }) 
+        .filter((bus) => {
+        return (to === "" ? bus : bus.to.includes(to))
+
+    })
 
     const busList = filteredBusList.map((bus) => {
         return <Bus
