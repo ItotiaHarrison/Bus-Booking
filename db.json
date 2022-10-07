@@ -6,7 +6,7 @@
             "to": "Nairobi",
             "departure": "7.01 P.M",
             "fare": "Kes 530",
-            "status": ""
+            "booked": false
         },
         {
             "id": 2,
@@ -14,7 +14,7 @@
             "to": "Kisumu",
             "departure": "11.06 P.M",
             "fare": "Kes 1000",
-            "status": ""
+            "booked": false
         },
         {
             "id": 3,
@@ -22,7 +22,7 @@
             "to": "Mombasa",
             "departure": "5.38 PM",
             "fare": "Kes 1000",
-            "status": ""
+            "booked": false
         },
         {
             "id": 4,
@@ -30,7 +30,7 @@
             "to": "Mandela",
             "departure": "2.56 P.M",
             "fare": "Kes 900",
-            "status": ""
+            "booked": false
         },
         {
             "id": 5,
@@ -38,7 +38,7 @@
             "to": "Nairobi",
             "departure": "3.19 P.M",
             "fare": "Kes 1100",
-            "status": ""
+            "booked": false
         },
         {
             "id": 6,
@@ -46,7 +46,7 @@
             "to": "Kitale",
             "departure": "10.09 A.M",
             "fare": "Kes 750",
-            "status": ""
+            "booked": false
         },
         {
             "id": 7,
@@ -54,7 +54,7 @@
             "to": "Nairobi",
             "departure": "7.15 A.M",
             "fare": "Kes 1000",
-            "status": ""
+            "booked": false
         },
         {
             "id": 8,
@@ -62,7 +62,7 @@
             "to": "Eldoret",
             "departure": "8.37 P.M",
             "fare": "Kes 500",
-            "status": ""
+            "booked": false
         },
         {
             "id": 9,
@@ -70,7 +70,7 @@
             "to": "Kisii",
             "departure": "6.24 P.M",
             "fare": "Kes 750",
-            "status": ""
+            "booked": false
         },
         {
             "id": 10,
@@ -78,7 +78,7 @@
             "to": "Nakuru",
             "departure": "4.49 A.M",
             "fare": "Kes 800",
-            "status": ""
+            "booked": false
         }
     ]
 }

@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
-import Bus from './Bus';
 
-function BusList({ from, to, buses, setBusList, availableBuses, setAvailableBuses }) {
+function BusList({ from, to, buses, setBusList, book, setBook}) {
 
     useEffect(() => {
         fetch("http://localhost:3000/buses")
@@ -11,23 +10,26 @@ function BusList({ from, to, buses, setBusList, availableBuses, setAvailableBuse
 
     const filteredBusList = buses.filter((bus) => {
         return (from === "" ? bus : bus.from.includes(from))
-    }) 
-        .filter((bus) => {
-        return (to === "" ? bus : bus.to.includes(to))
-
     })
+        .filter((bus) => {
+            return (to === "" ? bus : bus.to.includes(to))
+
+        })
+
+    function handleBook() {
+       setBook((book) => !book)
+    }
 
     const busList = filteredBusList.map((bus) => {
-        return <Bus
-            buses={buses}
-            setBusList={setBusList}
-            key={bus.id}
-            from={bus.from}
-            to={bus.to}
-            departure={bus.departure}
-            fare={bus.fare}
-            id={bus.id}
-        />
+        return (<tr key={bus.id}>
+            <td>{bus.from}</td>
+            <td>{bus.to}</td>
+            <td>{bus.departure}</td>
+            <td>{bus.fare}</td>
+            <td><button onClick={handleBook}>
+                {book ? "booked" : "book"}</button></td>
+        </tr>
+        )
     })
 
     return (
