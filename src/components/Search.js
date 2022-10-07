@@ -1,27 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-function Search() {
-    const [currentLocation, setCurrentLocation] = useState("");
-    const [destination, setDestination] = useState("");
-
-
+function Search({from, setFrom, to, setTo, availableBuses, setAvailableBuses}) {
+    
     function handleLocation(event) {
-        setCurrentLocation(event.target.value);
+        setFrom(event.target.value);
     }
 
 
     function handleDestination(event) {
-        setDestination(event.target.value);
+        setTo(event.target.value);
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        setAvailableBuses(event.target.value);
     }
 
     return (
         <div >
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div>
-                    <input type="text" name={currentLocation} placeholder="Current location" onChange={handleLocation} />
+                    <input type="text" name={from} placeholder="Current location" onChange={handleLocation} />
                 </div>
                 <div>
-                    <input type="text" name={destination} placeholder="Destination" onChange={handleDestination} />
+                    <input type="text" name={to} placeholder="Destination" onChange={handleDestination} />
                 </div>
                 <button>Available Buses</button>
             </form>

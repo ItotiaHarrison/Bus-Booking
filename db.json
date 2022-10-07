@@ -1,6 +1,7 @@
 {
     "buses": [
         {
+            "id": 1,
             "from": "Nakuru",
             "to": "Nairobi",
             "departure": "7.01 P.M",
@@ -8,6 +9,7 @@
             "status": ""
         },
         {
+            "id": 2,
             "from": "Nairobi",
             "to": "Kisumu",
             "departure": "11.06 P.M",
@@ -15,6 +17,7 @@
             "status": ""
         },
         {
+            "id": 3,
             "from": "Machakos",
             "to": "Mombasa",
             "departure": "5.38 PM",
@@ -22,6 +25,7 @@
             "status": ""
         },
         {
+            "id": 4,
             "from": "Nairobi",
             "to": "Mandela",
             "departure": "2.56 P.M",
@@ -29,6 +33,7 @@
             "status": ""
         },
         {
+            "id": 5,
             "from": "Mombasa",
             "to": "Nairobi",
             "departure": "3.19 P.M",
@@ -36,6 +41,7 @@
             "status": ""
         },
         {
+            "id": 6,
             "from": "Lowdar",
             "to": "Kitale",
             "departure": "10.09 A.M",
@@ -43,6 +49,7 @@
             "status": ""
         },
         {
+            "id": 7,
             "from": "Eldoret",
             "to": "Nairobi",
             "departure": "7.15 A.M",
@@ -50,6 +57,7 @@
             "status": ""
         },
         {
+            "id": 8,
             "from": "Kisumu",
             "to": "Eldoret",
             "departure": "8.37 P.M",
@@ -57,6 +65,7 @@
             "status": ""
         },
         {
+            "id": 9,
             "from": "Nairobi",
             "to": "Kisii",
             "departure": "6.24 P.M",
@@ -64,6 +73,7 @@
             "status": ""
         },
         {
+            "id": 10,
             "from": "Bungoma",
             "to": "Nakuru",
             "departure": "4.49 A.M",

@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect} from 'react';
 import Bus from './Bus';
 
-function BusList() {
-    const [buses, setBusList] = useState([]);
+function BusList({buses, setBusList, availableBuses, setAvailableBuses}) {
 
     useEffect(() => {
         fetch("http://localhost:3000/buses")
@@ -10,7 +9,7 @@ function BusList() {
             .then((data) => setBusList(data))
     }, [setBusList]);
 
-    const filteredBusList = buses.filter((bus) => bus.id)
+    const filteredBusList = buses.filter((bus) => (bus.from && bus.to))
 
     const busList = filteredBusList.map((bus) => {
         return <Bus
@@ -19,9 +18,9 @@ function BusList() {
             key={bus.id}
             from={bus.from}
             to={bus.to}
-            type={bus.type}
             departure={bus.departure}
             fare={bus.fare}
+            id={bus.id}
         />
     })
 
@@ -36,9 +35,6 @@ function BusList() {
                         <h3>To</h3>
                     </th>
                     <th>
-                        <h3>Bus Type</h3>
-                    </th>
-                    <th>
                         <h3>Departure Time</h3>
                     </th>
                     <th>
@@ -51,7 +47,7 @@ function BusList() {
                 {busList}
             </tbody>
         </table>
-    )
-}
+    );
+};
 
 export default BusList;

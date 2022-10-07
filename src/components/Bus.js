@@ -1,9 +1,11 @@
 import React from 'react'
 
-function Bus({ from, to, type, departure, fare }) {
+function Bus({ from, to, departure, fare, id, buses, setBusList }) {
 
     function handleBooking(event) {
-        const newStatus = event.target.value
+        const newStatus = buses.filter((bus) => {
+            return bus.id !== id
+        })
 
 
         fetch("http://localhost:3000/buses", {
@@ -22,7 +24,6 @@ function Bus({ from, to, type, departure, fare }) {
             <tr>
                 <td>{from}</td>
                 <td>{to}</td>
-                <td>{type}</td>
                 <td>{departure}</td>
                 <td>{fare}</td>
                 <td><button onClick={handleBooking}>Book</button></td>
