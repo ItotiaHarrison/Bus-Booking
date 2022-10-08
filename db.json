@@ -1,0 +1,84 @@
+{
+    "buses": [
+        {
+            "id": 1,
+            "from": "Nakuru",
+            "to": "Nairobi",
+            "departure": "7.01 P.M",
+            "fare": "Kes 530",
+            "booked": false
+        },
+        {
+            "id": 2,
+            "from": "Nairobi",
+            "to": "Kisumu",
+            "departure": "11.06 P.M",
+            "fare": "Kes 1000",
+            "booked": false
+        },
+        {
+            "id": 3,
+            "from": "Machakos",
+            "to": "Mombasa",
+            "departure": "5.38 PM",
+            "fare": "Kes 1000",
+            "booked": false
+        },
+        {
+            "id": 4,
+            "from": "Nairobi",
+            "to": "Mandela",
+            "departure": "2.56 P.M",
+            "fare": "Kes 900",
+            "booked": false
+        },
+        {
+            "id": 5,
+            "from": "Mombasa",
+            "to": "Nairobi",
+            "departure": "3.19 P.M",
+            "fare": "Kes 1100",
+            "booked": false
+        },
+        {
+            "id": 6,
+            "from": "Lowdar",
+            "to": "Kitale",
+            "departure": "10.09 A.M",
+            "fare": "Kes 750",
+            "booked": false
+        },
+        {
+            "id": 7,
+            "from": "Eldoret",
+            "to": "Nairobi",
+            "departure": "7.15 A.M",
+            "fare": "Kes 1000",
+            "booked": false
+        },
+        {
+            "id": 8,
+            "from": "Kisumu",
+            "to": "Eldoret",
+            "departure": "8.37 P.M",
+            "fare": "Kes 500",
+            "booked": false
+        },
+        {
+            "id": 9,
+            "from": "Nairobi",
+            "to": "Kisii",
+            "departure": "6.24 P.M",
+            "fare": "Kes 750",
+            "booked": false
+        },
+        {
+            "id": 10,
+            "from": "Bungoma",
+            "to": "Nakuru",
+            "departure": "4.49 A.M",
+            "fare": "Kes 800",
+            "booked": false
+        }
+    ]
+}
