@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 function BusList({ from, to, buses, setBusList, book, setBook}) {
 
     useEffect(() => {
-        fetch("https://itotiaharrison.github.io/Swift-booking-app/db.json")
+        fetch("https://itotiaharrison.github.io/Swift-booking-app/buses")
             .then((res) => res.json())
             .then((data) => setBusList(data))
     }, [setBusList]);
