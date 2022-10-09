@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 
-function BusList({ from, to, buses, setBusList, book, setBook}) {
+function BusList({ from, to, buses, setBusList, book, setBook }) {
 
     useEffect(() => {
-        fetch('https://itotiaharrison.github.io/Swift-booking-app/db.json/buses')
+        fetch('http://localhost:3000/buses')
             .then((res) => res.json())
             .then((data) => setBusList(data))
     }, [setBusList]);
@@ -17,7 +17,7 @@ function BusList({ from, to, buses, setBusList, book, setBook}) {
         })
 
     function handleBook() {
-       setBook((book) => !book)
+        setBook((book) => !book)
     }
 
     const busList = filteredBusList.map((bus) => {
@@ -28,7 +28,7 @@ function BusList({ from, to, buses, setBusList, book, setBook}) {
             <td>{bus.fare}</td>
             <td><button onClick={handleBook}>
                 {book ? "booked" : "book"}
-                </button></td>
+            </button></td>
         </tr>
         )
     })
