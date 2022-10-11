@@ -18,7 +18,6 @@ function Home() {
                 width="100%"
                 height="300"
                 styles={{height: "300px"}}
-                loading="lazy"
                 >
 
                 </Iframe>
