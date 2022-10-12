@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
 import Search from './Search';
 import BusList from './BusList';
 import Iframe from 'react-iframe';
 
 
 
-function Home() {
+function Home({isLoggedIn}) {
     const [from, setFrom] = useState("");
     const [to, setTo] = useState("");
     const [buses, setBusList] = useState([]);
     const [book, setBook] = useState(false);
 
+
+    if(!isLoggedIn) return <Redirect to="/login" />;
 
     return (
         <div className='home'>

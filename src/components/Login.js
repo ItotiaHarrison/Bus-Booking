@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom';
 
-
-function Login() {
+function Login({ setIsLoggedIn }) {
+    const history = useHistory();
     const [errorMessages, setErrorMessages] = useState([]);
     const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -23,6 +24,10 @@ function Login() {
 
     function handleSubmit(event) {
         event.preventDefault();
+
+        setIsLoggedIn(true);
+        history.push("/");
+
         var { uname, pass } = document.forms[0];
         const userData = database.find((user) => user.username === uname.value);
 

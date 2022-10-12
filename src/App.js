@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, {useState} from 'react';
 import { Route, Switch } from "react-router-dom";
 import NavBar from './components/NavBar';
 import Home from './components/Home';
@@ -9,21 +9,23 @@ import Support from './components/Support';
 import Footer from './components/Footer';
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <div className="App">
-      <NavBar />
+      <NavBar setIsLoggedIn={setIsLoggedIn} />
       <Switch>
         <Route exact path="/hire">
-          <Hire />
+          <Hire setIsLoggedIn={setIsLoggedIn} />
         </Route>
         <Route exact path="/login">
-          <Login />
+          <Login setIsLoggedIn={setIsLoggedIn} />
         </Route>
         <Route exact path="/">
-          <Home />
+          <Home isLoggedIn={isLoggedIn} />
         </Route>
         <Route exact path="/support">
-          <Support />
+          <Support setIsLoggedIn={setIsLoggedIn}/>
         </Route>
       </Switch>
       <Footer />
