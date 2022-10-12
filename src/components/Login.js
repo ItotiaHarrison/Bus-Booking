@@ -1,10 +1,17 @@
-import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import axios from 'axios';
+import { Link, useHistory } from 'react-router-dom';
 
-function Login({ setIsLoggedIn }) {
+function Login({ setIsLoggedIn }, props ) {
     const history = useHistory();
+
     const [errorMessages, setErrorMessages] = useState([]);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [user, setUser] = useState({
+        username: "",
+        password: "",
+        token: ""
+    });
 
     const database = [
         {
@@ -22,25 +29,54 @@ function Login({ setIsLoggedIn }) {
         pass: "invalid password"
     };
 
-    function handleSubmit(event) {
+
+    function loginUser(event) {
+        axios.post("http://localhost:3000/user/login", user).then((response) => {
+            if (response.data.message === "Auth Successful!") {
+                console.log(response.data);
+                props.getUser(
+                    response.data.user._id,
+                    response.data.user.username,
+                    response.data.token
+                );
+                props.changeAuthStatus();
+                history.push("/");
+            } else {
+                console.log(response.data);
+            }
+        });
+
+        setUser({
+            email: "",
+            password: "",
+            token: ""
+        });
+
         event.preventDefault();
 
-        setIsLoggedIn(true);
-        history.push("/");
+    }
 
-        var { uname, pass } = document.forms[0];
-        const userData = database.find((user) => user.username === uname.value);
 
-        if (userData) {
-            if (userData.password !== pass.value) {
-                setErrorMessages({ name: "pass", message: errors.pass });
-            } else {
-                setIsSubmitted(true);
-            }
-        } else {
-            setErrorMessages({ name: "uname", message: errors.uname });
-        }
-    };
+
+    // function handleSubmit(event) {
+    //     event.preventDefault();
+
+    //     setIsLoggedIn(true);
+    //     history.push("/");
+
+    //     var { uname, pass } = document.forms[0];
+    //     const userData = database.find((user) => user.username === uname.value);
+
+    //     if (userData) {
+    //         if (userData.password !== pass.value) {
+    //             setErrorMessages({ name: "pass", message: errors.pass });
+    //         } else {
+    //             setIsSubmitted(true);
+    //         }
+    //     } else {
+    //         setErrorMessages({ name: "uname", message: errors.uname });
+    //     }
+    // };
 
     const renderErrorMessage = (name) =>
         name === errorMessages.name && (
@@ -48,21 +84,52 @@ function Login({ setIsLoggedIn }) {
         );
 
 
+    // Handle the form submission
+
+    function handleChange(event) {
+        const { name, value } = event.target;
+        setUser((preValues) => {
+            return {
+                ...preValues, [name]: value
+            };
+        });
+    }
+
+
     const renderForm = (
         <div className="form">
-            <form onSubmit={handleSubmit}>
+
+            <form >
                 <div className="input-container">
                     <label>Username </label>
-                    <input type="text" name="uname" required />
+                    <input
+                        onChange={handleChange}
+                        type="text"
+                        name="uname"
+                        value={user.uname}
+                        placeholder="Enter Username"
+                        required />
                     {renderErrorMessage("uname")}
                 </div>
                 <div className="input-container">
                     <label>Password </label>
-                    <input type="password" name="pass" required />
+                    <input
+                        onChange={handleChange}
+                        type="password"
+                        name="pass"
+                        value={user.pass}
+                        placeholder="Enter Password"
+                        minLength="6"
+                        required />
                     {renderErrorMessage("pass")}
                 </div>
                 <div className="button-container">
-                    <input type="submit" />
+                    <button
+                        onClick={loginUser}
+                        type="submit"
+                    >
+                        Login
+                    </button>
                 </div>
             </form>
         </div>
@@ -75,6 +142,10 @@ function Login({ setIsLoggedIn }) {
                 <div className="title">Sign In</div>
                 {isSubmitted ? <div>User is successfully logged in</div> : renderForm}
             </div>
+
+            <Link to="/signup">
+                <p>Don't have an account? Click here to create!</p>
+            </Link>
         </div>
     )
 }

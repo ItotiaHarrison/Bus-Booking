@@ -33,18 +33,7 @@ function NavBar({setIsLoggedIn}) {
                 HOME
             </NavLink>
 
-            <NavLink
-                to="/login"
-                exact
-                style={linkStyles}
-                activeStyle={{
-                    background: "black",
-                }}
-            >
-                LOGIN
-            </NavLink>
-            <button onClick={handleLogout}>Logout</button>
-
+           
             <NavLink
                 to="/about"
                 exact
@@ -65,6 +54,30 @@ function NavBar({setIsLoggedIn}) {
                 }}
             >
                 SUPPORT
+            </NavLink>
+
+
+            <NavLink
+                to="/login"
+                exact
+                style={linkStyles}
+                activeStyle={{
+                    background: "black",
+                }}
+            >
+                LOGIN
+            </NavLink>
+            <button onClick={handleLogout}>Logout</button>
+
+            <NavLink
+                to="/signup"
+                exact
+                style={linkStyles}
+                activeStyle={{
+                    background: "black",
+                }}
+            >
+                SIGNUP
             </NavLink>
 
         </nav>
