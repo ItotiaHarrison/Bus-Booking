@@ -12,7 +12,7 @@ import Footer from './components/Footer';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
-  const [userName, setUserName] = useState("");
+  
 
   return (
     <div className="App">
